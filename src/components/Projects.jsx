@@ -7,7 +7,7 @@ import { Github } from './Icons';
 const projects = [
   {
     title: 'DiagnoOps - Lab Platform',
-    status: 'In Development',
+    status: 'Completed',
     desc: 'A comprehensive, full-stack Lab Management System. Streamlines diagnostic workflows, patient interactions, and automated reporting services for laboratory administrators.',
     icon: Layers,
     tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'SMTP Services', 'Role-Based Access'],
@@ -40,7 +40,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-darkBg relative overflow-hidden">
+    <section id="projects" className="py-12 md:py-24 bg-darkBg relative overflow-hidden">
       {/* Background soft highlights */}
       <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-accentPurple/5 rounded-full blur-[120px]"></div>
 
@@ -112,15 +112,15 @@ export default function Projects() {
 
                   {/* Action Links */}
                   <div className="flex items-center justify-between pt-4 border-t border-slate-800/60">
-                    <a 
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-xs text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors font-medium"
-                    >
-                      <Github className="h-4 w-4" />
-                      <span>Code</span>
-                    </a>
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-xs text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors font-medium"
+                      >
+                        <Github className="h-4 w-4" />
+                        <span>Code</span>
+                      </a>
                     {project.liveUrl !== '#' && (
                       <a 
                         href={project.liveUrl}

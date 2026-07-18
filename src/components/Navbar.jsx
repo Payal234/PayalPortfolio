@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code, Mail } from 'lucide-react';
+import { Menu, X, Code, Mail, Download } from 'lucide-react';
 import { Github, Linkedin } from './Icons';
 
 
@@ -30,13 +30,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
           ? 'py-3 bg-darkBg/80 backdrop-blur-lg border-b border-blue-500/10 shadow-lg'
           : 'py-5 bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -71,30 +71,20 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Social Icons */}
+            {/* Resume Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex items-center space-x-4 border-l border-slate-800 pl-6"
+              className="border-l border-slate-800 pl-6"
             >
               <a
-                href="https://github.com/Payal234"
-                target="_blank"
-                rel="noreferrer"
-                className="text-gray-400 hover:text-accentTurquoise transition-colors"
-                aria-label="GitHub"
+                href="/PayalDhobale_R.pdf"
+                download="Payal_Dhobale_Resume.pdf"
+                className="flex items-center gap-2 px-4 py-2 bg-slate-800/50 hover:bg-slate-700 text-sm font-semibold text-accentTurquoise rounded-lg transition-colors border border-accentTurquoise/30 shadow-sm"
               >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com/in/payal-dhobale"
-                target="_blank"
-                rel="noreferrer"
-                className="text-gray-400 hover:text-accentTurquoise transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
+                <Download className="h-4 w-4" />
+                <span>Resume</span>
               </a>
             </motion.div>
           </div>
@@ -127,28 +117,34 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsOpen(false);
+                    setTimeout(() => {
+                      const targetId = item.href.replace('#', '');
+                      const element = document.getElementById(targetId);
+                      if (element) {
+                        const navbarHeight = 90;
+                        const elementPosition = element.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                        window.history.pushState(null, '', item.href);
+                      }
+                    }, 150); // Delay scroll slightly to allow menu to unmount first
+                  }}
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-accentTurquoise hover:bg-slate-900/50 transition-all"
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex space-x-6 pt-4 border-t border-slate-850 justify-center">
+              <div className="pt-4 border-t border-slate-800/80">
                 <a
-                  href="https://github.com/Payal234"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-400 hover:text-accentTurquoise transition-colors"
+                  href="/PayalDhobale_R.pdf"
+                  download="Payal_Dhobale_Resume.pdf"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-slate-800/50 hover:bg-slate-700 text-base font-semibold text-accentTurquoise rounded-lg transition-colors border border-accentTurquoise/30 shadow-sm"
                 >
-                  <Github className="h-6 w-6" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/payal-dhobale"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-400 hover:text-accentTurquoise transition-colors"
-                >
-                  <Linkedin className="h-6 w-6" />
+                  <Download className="h-5 w-5" />
+                  <span>Download Resume</span>
                 </a>
               </div>
             </div>

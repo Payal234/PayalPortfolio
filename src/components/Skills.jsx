@@ -73,7 +73,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 bg-darkBg relative overflow-hidden">
+    <section id="skills" className="py-12 md:py-24 bg-darkBg relative overflow-hidden">
       {/* Background soft lighting */}
       <div className="absolute left-0 bottom-[10%] w-[300px] h-[300px] bg-accentTurquoise/5 rounded-full blur-[100px]"></div>
 

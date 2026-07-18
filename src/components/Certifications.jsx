@@ -57,7 +57,7 @@ const certs = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-24 bg-darkBg relative overflow-hidden">
+    <section id="certifications" className="py-12 md:py-24 bg-darkBg relative overflow-hidden">
       <div className="absolute left-[10%] top-[10%] w-[250px] h-[250px] bg-accentPurple/5 rounded-full blur-[90px]"></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

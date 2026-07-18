@@ -85,7 +85,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-darkBg relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-24 bg-darkBg relative overflow-hidden">
       {/* Background soft highlights */}
       <div className="absolute right-[10%] top-[40%] w-[300px] h-[300px] bg-accentTurquoise/5 rounded-full blur-[100px]"></div>
       <div className="absolute left-[5%] bottom-[5%] w-[250px] h-[250px] bg-accentPurple/5 rounded-full blur-[80px]"></div>
@@ -127,14 +127,14 @@ export default function Contact() {
               <div className="space-y-4 my-6">
                 <a 
                   href="mailto:payaldhobale399@gmail.com"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-accentTurquoise/30 transition-all duration-300 group"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-accentTurquoise/30 transition-all duration-300 group"
                 >
-                  <div className="p-3 rounded-lg bg-accentTurquoise/10 text-accentTurquoise group-hover:bg-accentTurquoise/20 transition-all">
+                  <div className="p-2 sm:p-3 rounded-lg bg-accentTurquoise/10 text-accentTurquoise group-hover:bg-accentTurquoise/20 transition-all shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Email Me</h4>
-                    <p className="text-sm font-medium text-white mt-0.5">payaldhobale399@gmail.com</p>
+                    <p className="text-xs sm:text-sm font-medium text-white mt-0.5 break-all sm:break-normal">payaldhobale399@gmail.com</p>
                   </div>
                 </a>
 

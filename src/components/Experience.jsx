@@ -16,7 +16,7 @@ const techUsed = ["React.js", "Node.js", "Express.js", "MongoDB", "Cloudinary", 
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-darkBg relative overflow-hidden">
+    <section id="experience" className="py-12 md:py-24 bg-darkBg relative overflow-hidden">
       {/* Background radial highlight */}
       <div className="absolute right-0 top-[20%] w-[350px] h-[350px] bg-accentPurple/5 rounded-full blur-[100px]"></div>
 

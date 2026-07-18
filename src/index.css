@@ -23,6 +23,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Accounts for fixed navbar */
     font-family: 'Inter', sans-serif;
   }
   

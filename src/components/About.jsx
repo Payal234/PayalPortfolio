@@ -7,8 +7,8 @@ const education = [
     type: 'Post Graduation',
     degree: 'Master of Computer Application (MCA)',
     institute: 'Prof. Ram Meghe Institute of Research & Technology, Badnera, Amravati, Maharashtra',
-    cgpa: '8.89 CGPA',
-    duration: '2024 - Expected Jun 2026',
+    cgpa: '9.16 CGPA',
+    duration: '2024 - 2026',
     icon: GraduationCap,
   },
   {
@@ -16,7 +16,7 @@ const education = [
     degree: 'Bachelor of Computer Application (BCA)',
     institute: 'G H Raisoni Institute of Engineering & Technology, Nagpur, Maharashtra',
     cgpa: '8.63 CGPA',
-    duration: '2020 - May 2023',
+    duration: '2020 - 2023',
     icon: BookOpen,
   }
 ];
@@ -42,7 +42,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 bg-darkBg relative">
+    <section id="about" className="py-12 md:py-24 bg-darkBg relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -80,12 +80,12 @@ export default function About() {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-800">
                 <div>
-                  <h4 className="text-2xl font-extrabold text-accentTurquoise">MCA Expected</h4>
+                  <h4 className="text-2xl font-extrabold text-accentTurquoise">MCA </h4>
                   <p className="text-xs text-gray-500">June 2026</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-extrabold text-accentPurple">8.89</h4>
-                  <p className="text-xs text-gray-500">Expected MCA CGPA</p>
+                  <h4 className="text-2xl font-extrabold text-accentPurple">9.16</h4>
+                  <p className="text-xs text-gray-500"> CGPA</p>
                 </div>
               </div>
             </div>
