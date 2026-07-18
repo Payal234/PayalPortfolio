@@ -123,7 +123,7 @@ export default function Hero() {
             <Github className="h-6 w-6" />
           </a>
           <a
-            href="https://linkedin.com/in/payal-dhobale"
+            href="https://www.linkedin.com/in/payal-dhobale/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-accentTurquoise transition-colors duration-200 transform hover:scale-110"
